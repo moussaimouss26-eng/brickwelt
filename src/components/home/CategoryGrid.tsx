@@ -1,15 +1,22 @@
 import Link from "next/link";
 import { categories } from "@/data/categories";
+import { products } from "@/data/products";
 import { ArrowUpRight } from "lucide-react";
 
 export function CategoryGrid() {
+  const counts = products.reduce<Record<string, number>>((acc, p) => {
+    acc[p.category] = (acc[p.category] ?? 0) + 1;
+    return acc;
+  }, {});
+  const visible = categories.filter((c) => (counts[c.slug] ?? 0) > 0);
+
   return (
     <section className="container-bw py-16">
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
           <h2 className="section-title">Beliebte Kategorien</h2>
           <p className="section-sub">
-            Von Technic bis Duplo – finde dein nächstes Set.
+            Große Sets, Schlösser und Klassiker – direkt aus dem BrickWelt-Katalog.
           </p>
         </div>
         <Link href="/produkte" className="btn-ghost text-brick-blue">
@@ -17,7 +24,7 @@ export function CategoryGrid() {
         </Link>
       </div>
       <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
-        {categories.map((c, i) => (
+        {visible.map((c, i) => (
           <Link
             key={c.slug}
             href={`/kategorien/${c.slug}`}
@@ -30,6 +37,9 @@ export function CategoryGrid() {
             />
             <h3 className="font-display text-sm font-bold">{c.name}</h3>
             <p className="mt-1 line-clamp-2 text-xs text-brick-black/55">{c.description}</p>
+            <p className="mt-2 text-[11px] font-bold uppercase tracking-wide text-brick-black/40">
+              {counts[c.slug]} Sets
+            </p>
           </Link>
         ))}
       </div>

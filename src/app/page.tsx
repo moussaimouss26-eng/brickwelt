@@ -19,20 +19,20 @@ export default function HomePage() {
       <ProductRail
         title="Bestseller"
         subtitle="Die beliebtesten Sets bei BrickWelt."
-        products={getBestsellers(4)}
+        products={getBestsellers(8)}
         href="/produkte?sort=popularity"
       />
       <ProductRail
         title="Neuheiten"
         subtitle="Frisch im Demo-Katalog."
-        products={getNewArrivals(4)}
+        products={getNewArrivals(8)}
         href="/neuheiten"
       />
       <section className="bg-[linear-gradient(180deg,#fff_0%,#FFF8E7_40%,#fff_100%)]">
         <ProductRail
           title="Angebote"
           subtitle="LEGO Angebote Deutschland – Demo-Rabatte."
-          products={getDeals(4)}
+          products={getDeals(8)}
           href="/angebote"
           linkLabel="Alle Angebote"
         />
@@ -40,7 +40,7 @@ export default function HomePage() {
       <ProductRail
         title="Geschenkideen"
         subtitle="Für Geburtstag, Feiertage und spontane Freude."
-        products={getGiftIdeas(4)}
+        products={getGiftIdeas(8)}
         href="/geschenkideen"
       />
       <Testimonials />
