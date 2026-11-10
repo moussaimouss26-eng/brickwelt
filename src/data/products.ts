@@ -598,6 +598,39 @@ export const products: Product[] = [
     ],
     tags: ["Bus", "Stadt"],
   },
+  {
+    id: "bw-1025",
+    slug: "gaozheng-lernbausteine-custom",
+    name: "Gaozheng Lernbausteine Custom",
+    shortDescription:
+      "LEGO-kompatible Bildungs-Bausteine von Gaozheng Toys – OEM/ODM-Qualität für kreatives Lernen ab 6.",
+    description:
+      "Entdecke das Gaozheng Lernbausteine Custom Set: ABS-Kunststoffsteine, die mit gängigen Systemen kompatibel sind, ideal für Schule, Freizeit und Marken-Customizing. Hersteller mit 20 Jahren Export-Erfahrung, Sicherheitsstandards wie CE, EN71 und REACH. Flexible Sets für kreatives Bauen und Lernen. Demo-Produkt bei BrickWelt – in Anlehnung an Gaozheng Toys (OEM/ODM), kein offizielles LEGO®-Produkt.",
+    category: "creator",
+    price: 34.99,
+    originalPrice: 44.99,
+    pieces: 520,
+    age: "6+",
+    stock: 48,
+    rating: 4.8,
+    reviewCount: 37,
+    isNew: true,
+    isBestseller: true,
+    isDeal: true,
+    isGiftIdea: true,
+    colors: ["#E30613", "#FFD100", "#006CB7"],
+    imageUrl: "/products/gaozheng-lernbausteine.jpg",
+    specs: [
+      { label: "Steine", value: "ca. 520 (variabel / OEM)" },
+      { label: "Alter", value: "6+" },
+      { label: "Material", value: "ABS-Kunststoff" },
+      { label: "Kompatibilität", value: "LEGO-kompatibel (System)" },
+      { label: "Hersteller", value: "Gaozheng Toys · Chenghai" },
+      { label: "Zertifikate", value: "CE, EN71, REACH u. a." },
+      { label: "Thema", value: "Creator / Bildungs-Sets" },
+    ],
+    tags: ["Gaozheng", "OEM", "ODM", "Lernbausteine", "Bildung", "kompatibel"],
+  },
 ];
 
 export function getProductBySlug(slug: string): Product | undefined {

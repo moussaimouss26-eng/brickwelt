@@ -72,7 +72,11 @@ export default async function ProductDetailPage({ params }: PageProps) {
 
         <div className="mt-8 grid gap-10 lg:grid-cols-2">
           <div className="overflow-hidden rounded-3xl border border-black/5 bg-brick-soft">
-            <ProductArt product={product} className="aspect-square w-full" />
+            <ProductArt
+              product={product}
+              priority
+              className="aspect-square w-full"
+            />
           </div>
 
           <div>

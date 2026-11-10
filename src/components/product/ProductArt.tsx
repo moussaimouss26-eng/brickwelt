@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Product } from "@/lib/types";
 
 interface ProductArtProps {
@@ -6,10 +7,29 @@ interface ProductArtProps {
   priority?: boolean;
 }
 
-/** Decorative SVG brick-art placeholder — no official assets. */
-export function ProductArt({ product, className = "" }: ProductArtProps) {
-  const [c1, c2, c3] = product.colors;
+/** Product photo when available; otherwise decorative SVG brick-art placeholder. */
+export function ProductArt({ product, className = "", priority = false }: ProductArtProps) {
   const title = `${product.name} – Demo-Produktbild BrickWelt`;
+
+  if (product.imageUrl) {
+    return (
+      <div className={`relative overflow-hidden bg-brick-soft ${className}`}>
+        <Image
+          src={product.imageUrl}
+          alt={title}
+          fill
+          priority={priority}
+          sizes="(max-width: 768px) 100vw, 50vw"
+          className="object-contain p-4 transition duration-500 group-hover:scale-105"
+        />
+        <span className="pointer-events-none absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-white/90 px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-brick-black/50 shadow-sm">
+          Demo-Foto · BrickWelt
+        </span>
+      </div>
+    );
+  }
+
+  const [c1, c2, c3] = product.colors;
 
   return (
     <svg

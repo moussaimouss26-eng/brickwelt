@@ -38,6 +38,8 @@ export interface Product {
   isDeal?: boolean;
   isGiftIdea?: boolean;
   colors: [string, string, string];
+  /** Optional real product photo under /public (preferred over SVG placeholder). */
+  imageUrl?: string;
   specs: { label: string; value: string }[];
   tags: string[];
 }
