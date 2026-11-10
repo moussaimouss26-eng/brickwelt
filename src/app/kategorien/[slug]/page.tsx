@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
-import { categories, getCategory } from "@/data/categories";
+import { getCategory } from "@/data/categories";
 import { filterProducts } from "@/data/products";
+import { getPopulatedCategories } from "@/lib/catalog";
 import { ProductGrid } from "@/components/product/ProductGrid";
 import { ProductFilters } from "@/components/product/ProductFilters";
 import { DisclaimerBanner } from "@/components/ui/DisclaimerBanner";
@@ -14,7 +15,7 @@ interface PageProps {
 }
 
 export function generateStaticParams() {
-  return categories.map((c) => ({ slug: c.slug }));
+  return getPopulatedCategories().map(({ category: c }) => ({ slug: c.slug }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {

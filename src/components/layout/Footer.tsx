@@ -1,10 +1,12 @@
 import Link from "next/link";
 import { Logo } from "@/components/ui/Logo";
 import { DisclaimerBanner } from "@/components/ui/DisclaimerBanner";
-import { categories } from "@/data/categories";
+import { getPopulatedCategories } from "@/lib/catalog";
 import { NewsletterForm } from "@/components/home/NewsletterForm";
 
 export function Footer() {
+  const populated = getPopulatedCategories().slice(0, 8);
+
   return (
     <footer className="mt-20 border-t border-black/5 bg-brick-soft">
       <div className="container-bw py-14">
@@ -52,10 +54,11 @@ export function Footer() {
                 Kategorien
               </h3>
               <ul className="mt-3 space-y-2 text-sm text-brick-black/70">
-                {categories.slice(0, 6).map((c) => (
+                {populated.map(({ category: c, count }) => (
                   <li key={c.slug}>
                     <Link href={`/kategorien/${c.slug}`} className="hover:text-brick-red">
                       {c.name}
+                      <span className="ml-1 text-brick-black/35">({count})</span>
                     </Link>
                   </li>
                 ))}
