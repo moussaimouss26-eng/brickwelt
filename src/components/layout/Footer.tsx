@@ -89,6 +89,11 @@ export function Footer() {
                     Konto
                   </Link>
                 </li>
+                <li>
+                  <Link href="/admin" className="hover:text-brick-red">
+                    Admin
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>

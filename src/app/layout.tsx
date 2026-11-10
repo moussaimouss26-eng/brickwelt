@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
 import { Nunito, Outfit } from "next/font/google";
-import { AnnouncementBar } from "@/components/layout/AnnouncementBar";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
-import { CookieConsent } from "@/components/layout/CookieConsent";
 import { Providers } from "@/components/layout/Providers";
+import { StoreShell } from "@/components/layout/StoreShell";
 import "./globals.css";
 
 const display = Outfit({
@@ -57,11 +54,7 @@ export default function RootLayout({
     <html lang="de">
       <body className={`${display.variable} ${body.variable} min-h-screen antialiased`}>
         <Providers>
-          <AnnouncementBar />
-          <Header />
-          <main className="min-h-[60vh]">{children}</main>
-          <Footer />
-          <CookieConsent />
+          <StoreShell>{children}</StoreShell>
         </Providers>
       </body>
     </html>

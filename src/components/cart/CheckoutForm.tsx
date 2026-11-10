@@ -5,11 +5,13 @@ import Link from "next/link";
 import { useCart } from "@/context/cart-context";
 import { getProductById } from "@/data/products";
 import { formatEUR } from "@/lib/format";
+import { buildCheckoutOrder, persistNewOrder } from "@/lib/orders";
 import { CheckCircle2 } from "lucide-react";
 
 export function CheckoutForm() {
   const { items, subtotal, clear, hydrated } = useCart();
   const [done, setDone] = useState(false);
+  const [orderId, setOrderId] = useState<string | null>(null);
 
   if (!hydrated) {
     return <p className="text-sm text-brick-black/60">Laden…</p>;
@@ -23,11 +25,19 @@ export function CheckoutForm() {
           Bestellung erfasst (Demo)
         </h1>
         <p className="mt-2 text-sm text-brick-black/65">
-          Es wurde keine echte Bestellung oder Zahlung ausgeführt.
+          Es wurde keine echte Zahlung ausgeführt. Die Bestellung liegt im Admin-Panel.
         </p>
-        <Link href="/produkte" className="btn-primary mt-6 inline-flex">
-          Weiter stöbern
-        </Link>
+        {orderId && (
+          <p className="mt-3 font-display text-lg font-bold text-brick-red">{orderId}</p>
+        )}
+        <div className="mt-6 flex flex-wrap justify-center gap-3">
+          <Link href="/produkte" className="btn-primary inline-flex">
+            Weiter stöbern
+          </Link>
+          <Link href="/admin/bestellungen" className="btn-secondary inline-flex">
+            Im Admin ansehen
+          </Link>
+        </div>
       </div>
     );
   }
@@ -46,8 +56,25 @@ export function CheckoutForm() {
   const shipping = subtotal >= 49 ? 0 : 4.99;
   const total = subtotal + shipping;
 
-  function onSubmit(e: FormEvent) {
+  function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    const fd = new FormData(e.currentTarget);
+    const order = buildCheckoutOrder(
+      {
+        vorname: String(fd.get("vorname") || "").trim(),
+        nachname: String(fd.get("nachname") || "").trim(),
+        email: String(fd.get("email") || "").trim(),
+        strasse: String(fd.get("strasse") || "").trim(),
+        plz: String(fd.get("plz") || "").trim(),
+        ort: String(fd.get("ort") || "").trim(),
+        land: String(fd.get("land") || "").trim(),
+      },
+      items
+    );
+    if (order) {
+      persistNewOrder(order);
+      setOrderId(order.id);
+    }
     clear();
     setDone(true);
   }
@@ -108,8 +135,8 @@ export function CheckoutForm() {
           </div>
         </fieldset>
         <p className="disclaimer">
-          Demo-Checkout: Daten werden nicht gespeichert oder übermittelt. BrickWelt ist
-          nicht mit der LEGO Group verbunden.
+          Demo-Checkout: Bestellungen werden lokal im Browser gespeichert und erscheinen im
+          Admin-Panel. Keine echte Zahlung. BrickWelt ist nicht mit der LEGO Group verbunden.
         </p>
       </div>
 
