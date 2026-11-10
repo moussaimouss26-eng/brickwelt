@@ -661,6 +661,36 @@ export const products: Product[] = [
     ],
     tags: ["Sagrada Familia", "Barcelona", "Gaudí", "Architecture", "Erwachsene", "Display", "21065"],
   },
+  {
+    id: "bw-1027",
+    slug: "dragon-ball-shenron-goku-11390",
+    name: "Dragon Ball: Shenron & Goku",
+    shortDescription:
+      "Ikonisches Icons-Display: Shenron über den sieben Dragon Balls, mit Goku auf der Wolke – 1.764 Steine für Fans ab 18.",
+    description:
+      "Erfülle dir den Wunsch: Baue Shenron, den ewigen Drachen, in spektakulärer Windung über den sieben Dragon Balls. Bewegliche Kopf- und Klauen-Posen, wellige Schuppen und die Minifigur Goku (Kind) auf der magischen Wolke zum Umsetzen. Perfektes Anime-Display für Regal oder Schreibtisch. Ca. 32 × 26 × 24 cm. BrickWelt Demo-Katalogartikel in Anlehnung an Set 11390 – kein offizieller LEGO®-Verkauf über BrickWelt.",
+    category: "icons",
+    price: 139.99,
+    pieces: 1764,
+    age: "18+",
+    stock: 12,
+    rating: 4.9,
+    reviewCount: 86,
+    isNew: true,
+    isBestseller: true,
+    isGiftIdea: true,
+    colors: ["#1F8A4C", "#F5D547", "#E85D04"],
+    imageUrl: "/products/dragon-ball-shenron-goku-11390.jpg",
+    specs: [
+      { label: "Steine", value: "1.764" },
+      { label: "Alter", value: "18+" },
+      { label: "Set-Nr.", value: "11390" },
+      { label: "Figuren", value: "1 (Goku)" },
+      { label: "Maße (gebaut)", value: "ca. 32 × 26 × 24 cm" },
+      { label: "Thema", value: "Icons · Dragon Ball" },
+    ],
+    tags: ["Dragon Ball", "Shenron", "Goku", "Anime", "Icons", "Display", "11390"],
+  },
 ];
 
 export function getProductBySlug(slug: string): Product | undefined {
