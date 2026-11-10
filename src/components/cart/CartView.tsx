@@ -115,7 +115,10 @@ export function CartView() {
         <Link href="/kasse" className="btn-primary mt-6 w-full">
           Zur Kasse
         </Link>
-        <p className="disclaimer mt-3">Demo-Checkout – keine echte Zahlung.</p>
+        <p className="mt-3 text-xs leading-relaxed text-brick-black/55">
+          Versand aus Berlin-Neukölln · kostenlos ab 49&nbsp;€
+        </p>
+        <p className="disclaimer mt-2">Demo-Checkout – keine echte Zahlung.</p>
       </aside>
     </div>
   );

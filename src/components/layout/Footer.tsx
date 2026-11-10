@@ -1,8 +1,10 @@
 import Link from "next/link";
 import { Logo } from "@/components/ui/Logo";
 import { DisclaimerBanner } from "@/components/ui/DisclaimerBanner";
+import { ContactDetails } from "@/components/ui/ContactDetails";
 import { getPopulatedCategories } from "@/lib/catalog";
 import { NewsletterForm } from "@/components/home/NewsletterForm";
+import { siteContact } from "@/data/contact";
 
 export function Footer() {
   const populated = getPopulatedCategories().slice(0, 8);
@@ -23,7 +25,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="grid gap-8 sm:grid-cols-3 lg:col-span-8">
+          <div className="grid gap-8 sm:grid-cols-2 lg:col-span-5 lg:grid-cols-2">
             <div>
               <h3 className="font-display text-sm font-bold uppercase tracking-wide">Shop</h3>
               <ul className="mt-3 space-y-2 text-sm text-brick-black/70">
@@ -64,8 +66,21 @@ export function Footer() {
                 ))}
               </ul>
             </div>
+          </div>
+
+          <div className="space-y-8 lg:col-span-3">
             <div>
-              <h3 className="font-display text-sm font-bold uppercase tracking-wide">Rechtliches</h3>
+              <h3 className="font-display text-sm font-bold uppercase tracking-wide">
+                Kontakt
+              </h3>
+              <div className="mt-3">
+                <ContactDetails compact showEmail={false} />
+              </div>
+            </div>
+            <div>
+              <h3 className="font-display text-sm font-bold uppercase tracking-wide">
+                Rechtliches
+              </h3>
               <ul className="mt-3 space-y-2 text-sm text-brick-black/70">
                 <li>
                   <Link href="/impressum" className="hover:text-brick-red">
@@ -105,8 +120,11 @@ export function Footer() {
         <div className="mt-12 space-y-3 border-t border-black/10 pt-6">
           <DisclaimerBanner />
           <p className="text-xs text-brick-black/50">
-            © {new Date().getFullYear()} BrickWelt Demo. Alle Preise in EUR inkl. MwSt.
-            (Demo). Keine echte Bestellabwicklung.
+            © {new Date().getFullYear()} {siteContact.company} · {siteContact.addressLine} ·{" "}
+            <a href={siteContact.phoneHref} className="hover:text-brick-red">
+              {siteContact.phoneDisplay}
+            </a>
+            . Alle Preise in EUR inkl. MwSt. (Demo). Keine echte Bestellabwicklung.
           </p>
         </div>
       </div>

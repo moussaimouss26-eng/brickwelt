@@ -6,6 +6,7 @@ import { useCart } from "@/context/cart-context";
 import { getProductById } from "@/data/products";
 import { formatEUR } from "@/lib/format";
 import { buildCheckoutOrder, persistNewOrder } from "@/lib/orders";
+import { siteContact } from "@/data/contact";
 import { CheckCircle2 } from "lucide-react";
 
 export function CheckoutForm() {
@@ -140,39 +141,58 @@ export function CheckoutForm() {
         </p>
       </div>
 
-      <aside className="h-fit rounded-2xl border border-black/5 bg-brick-soft/50 p-6 lg:col-span-5">
-        <h2 className="font-display text-lg font-bold">Bestellübersicht</h2>
-        <ul className="mt-4 space-y-3 text-sm">
-          {items.map((item) => {
-            const p = getProductById(item.productId);
-            if (!p) return null;
-            return (
-              <li key={item.productId} className="flex justify-between gap-3">
-                <span>
-                  {p.name} × {item.quantity}
-                </span>
-                <span className="font-semibold">{formatEUR(p.price * item.quantity)}</span>
-              </li>
-            );
-          })}
-        </ul>
-        <dl className="mt-4 space-y-2 border-t border-black/10 pt-4 text-sm">
-          <div className="flex justify-between">
-            <dt>Zwischensumme</dt>
-            <dd>{formatEUR(subtotal)}</dd>
-          </div>
-          <div className="flex justify-between">
-            <dt>Versand</dt>
-            <dd>{shipping === 0 ? "Kostenlos" : formatEUR(shipping)}</dd>
-          </div>
-          <div className="flex justify-between text-base font-extrabold">
-            <dt>Gesamt</dt>
-            <dd>{formatEUR(total)}</dd>
-          </div>
-        </dl>
-        <button type="submit" className="btn-primary mt-6 w-full">
-          Demo-Bestellung absenden
-        </button>
+      <aside className="h-fit space-y-4 lg:col-span-5">
+        <div className="rounded-2xl border border-black/5 bg-brick-soft/50 p-6">
+          <h2 className="font-display text-lg font-bold">Bestellübersicht</h2>
+          <ul className="mt-4 space-y-3 text-sm">
+            {items.map((item) => {
+              const p = getProductById(item.productId);
+              if (!p) return null;
+              return (
+                <li key={item.productId} className="flex justify-between gap-3">
+                  <span>
+                    {p.name} × {item.quantity}
+                  </span>
+                  <span className="font-semibold">{formatEUR(p.price * item.quantity)}</span>
+                </li>
+              );
+            })}
+          </ul>
+          <dl className="mt-4 space-y-2 border-t border-black/10 pt-4 text-sm">
+            <div className="flex justify-between">
+              <dt>Zwischensumme</dt>
+              <dd>{formatEUR(subtotal)}</dd>
+            </div>
+            <div className="flex justify-between">
+              <dt>Versand</dt>
+              <dd>{shipping === 0 ? "Kostenlos" : formatEUR(shipping)}</dd>
+            </div>
+            <div className="flex justify-between text-base font-extrabold">
+              <dt>Gesamt</dt>
+              <dd>{formatEUR(total)}</dd>
+            </div>
+          </dl>
+          <button type="submit" className="btn-primary mt-6 w-full">
+            Demo-Bestellung absenden
+          </button>
+        </div>
+        <div className="rounded-2xl border border-black/5 bg-white p-5 text-sm text-brick-black/70">
+          <h3 className="font-display text-sm font-bold uppercase tracking-wide text-brick-black">
+            Versand &amp; Kontakt
+          </h3>
+          <p className="mt-2">
+            Versand aus Berlin · {siteContact.addressLine}
+          </p>
+          <p className="mt-2">
+            Fragen zur Lieferung?{" "}
+            <a
+              href={siteContact.phoneHref}
+              className="font-semibold text-brick-black hover:text-brick-red"
+            >
+              {siteContact.phoneDisplay}
+            </a>
+          </p>
+        </div>
       </aside>
     </form>
   );

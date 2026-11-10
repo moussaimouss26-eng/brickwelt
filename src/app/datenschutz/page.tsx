@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { DisclaimerBanner } from "@/components/ui/DisclaimerBanner";
+import { ContactDetails } from "@/components/ui/ContactDetails";
+import { siteContact } from "@/data/contact";
 
 export const metadata: Metadata = {
   title: "Datenschutz",
@@ -18,11 +20,15 @@ export default function DatenschutzPage() {
         </p>
         <section>
           <h2 className="font-display text-lg font-bold text-brick-black">
-            1. Verantwortliche Stelle (Demo)
+            1. Verantwortliche Stelle
           </h2>
           <p className="mt-2">
-            BrickWelt Demo GmbH, Musterstraße 12, 10115 Berlin – demo@brickwelt.example
+            Verantwortlicher im Sinne der DSGVO ist {siteContact.legalName},{" "}
+            {siteContact.addressLine}, {siteContact.country}.
           </p>
+          <div className="mt-4 rounded-2xl border border-black/5 bg-brick-soft/60 p-5">
+            <ContactDetails />
+          </div>
         </section>
         <section>
           <h2 className="font-display text-lg font-bold text-brick-black">

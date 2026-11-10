@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { DisclaimerBanner } from "@/components/ui/DisclaimerBanner";
+import { siteContact } from "@/data/contact";
 
 export const metadata: Metadata = {
   title: "AGB",
@@ -19,7 +20,8 @@ export default function AgbPage() {
           <h2 className="font-display text-lg font-bold">§1 Geltungsbereich</h2>
           <p className="mt-2">
             Diese Demo-AGB gelten für die Nutzung der BrickWelt Website zu
-            Demonstrationszwecken.
+            Demonstrationszwecken. Anbieter: {siteContact.legalName},{" "}
+            {siteContact.addressLine}.
           </p>
         </section>
         <section>
@@ -33,7 +35,12 @@ export default function AgbPage() {
           <h2 className="font-display text-lg font-bold">§3 Versand</h2>
           <p className="mt-2">
             Angezeigte Versandkosten (kostenlos ab 49 €) sind Beispielwerte für den
-            deutschen Markt.
+            deutschen Markt. Versandadresse / Lagerort für diese Demo:{" "}
+            {siteContact.addressLine}. Rückfragen zum Versand unter{" "}
+            <a href={siteContact.phoneHref} className="font-medium text-brick-red hover:underline">
+              {siteContact.phoneDisplay}
+            </a>
+            .
           </p>
         </section>
         <section>

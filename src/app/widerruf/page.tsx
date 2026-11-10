@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { DisclaimerBanner } from "@/components/ui/DisclaimerBanner";
+import { ContactDetails } from "@/components/ui/ContactDetails";
+import { siteContact } from "@/data/contact";
 
 export const metadata: Metadata = {
   title: "Widerrufsbelehrung",
@@ -22,6 +24,15 @@ export default function WiderrufPage() {
             Verbraucher haben ein gesetzliches Widerrufsrecht. In dieser Demo wird kein
             Kaufvertrag geschlossen; ein Widerruf ist daher nicht erforderlich.
           </p>
+        </section>
+        <section>
+          <h2 className="font-display text-lg font-bold">Widerrufsadresse</h2>
+          <p className="mt-2">
+            Im Produktivbetrieb wäre der Widerruf zu richten an {siteContact.legalName}:
+          </p>
+          <div className="mt-4 rounded-2xl border border-black/5 bg-brick-soft/60 p-5">
+            <ContactDetails />
+          </div>
         </section>
         <section>
           <h2 className="font-display text-lg font-bold">Folgen des Widerrufs (Muster)</h2>
