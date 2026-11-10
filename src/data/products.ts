@@ -631,6 +631,36 @@ export const products: Product[] = [
     ],
     tags: ["Gaozheng", "OEM", "ODM", "Lernbausteine", "Bildung", "kompatibel"],
   },
+  {
+    id: "bw-1026",
+    slug: "sagrada-familia-21065",
+    name: "Sagrada Família",
+    shortDescription:
+      "Monumentales Architecture-Set mit 12.060 Steinen – Barcelonas Ikone als spektakuläres Display-Modell für Erwachsene.",
+    description:
+      "Baue eines der größten Architektur-Sets überhaupt: die Sagrada Família. Über 12.000 Steine, detailreiche Fassaden (Geburt, Passion, Herrlichkeit), Wirkung wie Buntglasfenster und elegante Namensplatte auf dem Sockel. Du folgst der realen Bauchronologie – von Apsis und Krypta bis zu den sechs Türmen. Maße gebaut ca. 62 × 47 × 39 cm. BrickWelt Demo-Katalogartikel in Anlehnung an Set 21065 – kein Verkauf über BrickWelt als offizieller LEGO®-Shop.",
+    category: "architecture",
+    price: 749.99,
+    pieces: 12060,
+    age: "18+",
+    stock: 6,
+    rating: 4.9,
+    reviewCount: 214,
+    isNew: true,
+    isBestseller: true,
+    isGiftIdea: true,
+    colors: ["#E8E0D4", "#8B9A7D", "#C4A574"],
+    imageUrl: "/products/sagrada-familia-21065.jpg",
+    specs: [
+      { label: "Steine", value: "12.060" },
+      { label: "Alter", value: "18+" },
+      { label: "Set-Nr.", value: "21065" },
+      { label: "Maße (gebaut)", value: "ca. 62 × 47 × 39 cm" },
+      { label: "Thema", value: "Architecture" },
+      { label: "Highlight", value: "Größtes Architecture-Set · Display" },
+    ],
+    tags: ["Sagrada Familia", "Barcelona", "Gaudí", "Architecture", "Erwachsene", "Display", "21065"],
+  },
 ];
 
 export function getProductBySlug(slug: string): Product | undefined {
