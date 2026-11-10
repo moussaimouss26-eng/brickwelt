@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #111111;
+  --brick-red: #e30613;
+  --brick-yellow: #ffd100;
+  --brick-blue: #006cb7;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+::selection {
+  background: rgba(255, 209, 0, 0.45);
+  color: #111;
+}
+
+@layer components {
+  .container-bw {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-brick-red px-5 py-3 text-sm font-bold text-white shadow-brick transition duration-300 hover:-translate-y-0.5 hover:bg-[#c50510] hover:shadow-lift focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brick-red;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border-2 border-brick-black bg-white px-5 py-3 text-sm font-bold text-brick-black transition duration-300 hover:-translate-y-0.5 hover:bg-brick-yellow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brick-black;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-3 py-2 text-sm font-semibold text-brick-black/80 transition hover:bg-brick-soft hover:text-brick-black;
+  }
+
+  .section-title {
+    @apply font-display text-3xl font-extrabold tracking-tight text-brick-black sm:text-4xl;
+  }
+
+  .section-sub {
+    @apply mt-2 max-w-2xl text-base text-brick-black/65;
+  }
+
+  .card-interactive {
+    @apply rounded-2xl border border-black/5 bg-white transition duration-300 hover:-translate-y-1 hover:border-brick-red/20 hover:shadow-brick;
+  }
+
+  .disclaimer {
+    @apply text-xs leading-relaxed text-brick-black/55;
+  }
+
+  .input-field {
+    @apply w-full rounded-xl border border-black/10 bg-white px-4 py-3 text-sm outline-none transition focus:border-brick-blue focus:ring-2 focus:ring-brick-blue/20;
+  }
+
+  .badge {
+    @apply inline-flex items-center rounded-lg px-2 py-0.5 text-[11px] font-bold uppercase tracking-wide;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
