@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!cat) return { title: "Kategorie" };
   return {
     title: `${cat.name} – BrickNova`,
-    description: `${cat.description} BrickNova Kinderspielzeug bei BrickWelt.`,
+    description: `${cat.description} BrickNova Kinderspielzeug bei BrickNova.`,
   };
 }
 

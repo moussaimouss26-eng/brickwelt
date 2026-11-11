@@ -12,7 +12,7 @@ export function CategoryGrid() {
         <div>
           <h2 className="section-title">Kategorien</h2>
           <p className="section-sub">
-            Nur Themen mit Sets im BrickWelt-Katalog – {rows.length} Kategorien, klar
+            Nur Themen mit Sets im BrickNova-Katalog – {rows.length} Kategorien, klar
             sortiert.
           </p>
         </div>

@@ -1,7 +1,7 @@
 /** Business contact used across footer, legal pages, and checkout. */
 export const siteContact = {
-  company: "BrickWelt",
-  legalName: "BrickWelt",
+  company: "BrickNova",
+  legalName: "BrickNova",
   street: "Sonnenallee 25",
   postalCode: "12047",
   city: "Berlin-Neukölln",

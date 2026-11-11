@@ -5,7 +5,7 @@ import { addressMultiline, siteContact } from "@/data/contact";
 
 export const metadata: Metadata = {
   title: "Impressum",
-  description: "Impressum und Anbieterkennzeichnung von BrickWelt (Demo).",
+  description: "Impressum und Anbieterkennzeichnung von BrickNova (Demo).",
 };
 
 export default function ImpressumPage() {

@@ -4,7 +4,7 @@ import { siteContact } from "@/data/contact";
 
 export const metadata: Metadata = {
   title: "AGB",
-  description: "Allgemeine Geschäftsbedingungen (Demo) von BrickWelt.",
+  description: "Allgemeine Geschäftsbedingungen (Demo) von BrickNova.",
 };
 
 export default function AgbPage() {
@@ -13,13 +13,13 @@ export default function AgbPage() {
       <h1 className="section-title">Allgemeine Geschäftsbedingungen</h1>
       <div className="mt-8 space-y-6 text-sm leading-relaxed text-brick-black/80">
         <p>
-          Die folgenden AGB sind Platzhalter für den BrickWelt Demo-Shop und begründen
+          Die folgenden AGB sind Platzhalter für den BrickNova Demo-Shop und begründen
           kein reales Vertragsverhältnis.
         </p>
         <section>
           <h2 className="font-display text-lg font-bold">§1 Geltungsbereich</h2>
           <p className="mt-2">
-            Diese Demo-AGB gelten für die Nutzung der BrickWelt Website zu
+            Diese Demo-AGB gelten für die Nutzung der BrickNova Website zu
             Demonstrationszwecken. Anbieter: {siteContact.legalName},{" "}
             {siteContact.addressLine}.
           </p>
@@ -62,7 +62,7 @@ export default function AgbPage() {
         <section>
           <h2 className="font-display text-lg font-bold">§5 Markenhinweis</h2>
           <p className="mt-2">
-            BrickWelt / BrickNova verkauft ausschließlich Spielzeug unter eigener Marke.
+            BrickNova verkauft ausschließlich Spielzeug unter eigener Marke.
             Es werden keine Lizenzen oder Autorisierungen Dritter beansprucht.
           </p>
         </section>

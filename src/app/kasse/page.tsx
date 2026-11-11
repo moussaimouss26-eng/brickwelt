@@ -3,7 +3,7 @@ import { CheckoutForm } from "@/components/cart/CheckoutForm";
 
 export const metadata: Metadata = {
   title: "Kasse",
-  description: "Demo-Checkout mit deutschen Adressfeldern bei BrickWelt.",
+  description: "Demo-Checkout mit deutschen Adressfeldern bei BrickNova.",
 };
 
 export default function KassePage() {

@@ -1,4 +1,4 @@
-# BrickWelt
+# BrickNova
 
 Deutscher Demo-Shop für LEGO-Style Sets (Next.js App Router).
 

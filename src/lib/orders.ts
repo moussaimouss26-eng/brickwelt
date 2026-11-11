@@ -32,10 +32,10 @@ export interface Order {
   source: "checkout" | "demo";
 }
 
-export const ORDERS_STORAGE_KEY = "brickwelt-orders-v1";
-export const ADMIN_SESSION_KEY = "brickwelt-admin-session";
+export const ORDERS_STORAGE_KEY = "bricknova-orders-v1";
+export const ADMIN_SESSION_KEY = "bricknova-admin-session";
 /** Demo admin password — change before real use. */
-export const ADMIN_DEMO_PASSWORD = "brickwelt";
+export const ADMIN_DEMO_PASSWORD = "bricknova";
 
 export const ORDER_STATUS_LABEL: Record<OrderStatus, string> = {
   neu: "Neu",

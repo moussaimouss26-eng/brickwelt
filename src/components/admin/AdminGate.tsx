@@ -44,11 +44,11 @@ export function AdminGate({ children }: { children: ReactNode }) {
           className="w-full max-w-md rounded-3xl border border-black/5 bg-white p-8 shadow-sm"
         >
           <p className="text-xs font-bold uppercase tracking-wide text-brick-black/45">
-            BrickWelt Admin
+            BrickNova Admin
           </p>
           <h1 className="mt-2 font-display text-2xl font-extrabold">Anmelden</h1>
           <p className="mt-2 text-sm text-brick-black/60">
-            Demo-Zugang: Passwort <code className="rounded bg-brick-soft px-1.5 py-0.5 text-xs">brickwelt</code>
+            Demo-Zugang: Passwort <code className="rounded bg-brick-soft px-1.5 py-0.5 text-xs">bricknova</code>
           </p>
           <label className="mt-6 block text-sm font-medium">
             Passwort

@@ -1,7 +1,7 @@
 import type { Product } from "@/lib/types";
 import { categories } from "./categories";
 
-/** BrickNova / BrickWelt Eigenmarke – 5 Original-Kinderspielzeuge. */
+/** BrickNova Eigenmarke – 5 Original-Kinderspielzeuge. */
 export const products: Product[] = [
   {
     id: "bn-1001",
@@ -10,7 +10,7 @@ export const products: Product[] = [
     shortDescription:
       "Bunter Holz-Stapelturm in sanften Regenbogenfarben – fein motorisch, ruhig und zeitlos ab 18 Monaten.",
     description:
-      "Der BrickNova Regenbogen-Stapelturm lädt zum Sortieren, Stapeln und kreativen Bauen ein. Sieben Bögen aus glatt geschliffenem Holz in warmen Farben fördern Gleichgewichtssinn und Farbenlernen. Ideal für den Kinderzimmer-Tisch oder als ruhiges Begleitspiel. Marke BrickNova – Eigenentwicklung von BrickWelt.",
+      "Der BrickNova Regenbogen-Stapelturm lädt zum Sortieren, Stapeln und kreativen Bauen ein. Sieben Bögen aus glatt geschliffenem Holz in warmen Farben fördern Gleichgewichtssinn und Farbenlernen. Ideal für den Kinderzimmer-Tisch oder als ruhiges Begleitspiel. Marke BrickNova – Eigenentwicklung von BrickNova.",
     category: "holzspielzeug",
     price: 29.99,
     originalPrice: 34.99,
@@ -41,7 +41,7 @@ export const products: Product[] = [
     shortDescription:
       "Kuscheliger Begleiter in Creme und Rosé – weiches Plüsch für Gute-Nacht-Rituale ab 0 Jahren.",
     description:
-      "Der BrickNova Wolkenweich Plüschhase ist der ruhige Freund für Kinderwagen, Bett und Sofa. Extra weiches Plüsch, freundliche Stick-Augen und eine kuschelige Größe zum Umarmen. Waschbares Design für den Alltag. Eigenmarke BrickNova by BrickWelt – ohne Fremdmarken.",
+      "Der BrickNova Wolkenweich Plüschhase ist der ruhige Freund für Kinderwagen, Bett und Sofa. Extra weiches Plüsch, freundliche Stick-Augen und eine kuschelige Größe zum Umarmen. Waschbares Design für den Alltag. Eigenmarke BrickNova – ohne Fremdmarken.",
     category: "kuscheltiere",
     price: 19.99,
     pieces: 1,
@@ -101,7 +101,7 @@ export const products: Product[] = [
     shortDescription:
       "48-teiliges Holzpuzzle mit sanfter Waldszene – Reh, Fuchs und Eule für ruhige Spielmomente ab 4 Jahren.",
     description:
-      "Das BrickNova Waldtiere Puzzle bringt Ruhe und Konzentration zusammen. 48 stabile Puzzleteile zeigen eine freundliche Waldlandschaft mit Tieren – ideal für gemeinsame Puzzle-Nachmittage. Robuste Karton- bzw. Holzoptik für Kinderhände. Eigenmarke BrickNova by BrickWelt.",
+      "Das BrickNova Waldtiere Puzzle bringt Ruhe und Konzentration zusammen. 48 stabile Puzzleteile zeigen eine freundliche Waldlandschaft mit Tieren – ideal für gemeinsame Puzzle-Nachmittage. Robuste Karton- bzw. Holzoptik für Kinderhände. Eigenmarke BrickNova.",
     category: "puzzle",
     price: 16.99,
     pieces: 48,
@@ -129,7 +129,7 @@ export const products: Product[] = [
     shortDescription:
       "Magnetische Formen und Stäbe für erste STEM-Ideen – Häuser, Räder und freies Konstruieren ab 5 Jahren.",
     description:
-      "Der BrickNova Entdecker Magnet-Baukasten macht Magnetismus greifbar: bunte geometrische Platten und Stäbe lassen sich zu Häuschen, Fahrzeugen und Figuren verbinden. Fördert Experimentierfreude und räumliches Denken – ohne Bildschirm. BrickNova / BrickWelt Eigenmarke.",
+      "Der BrickNova Entdecker Magnet-Baukasten macht Magnetismus greifbar: bunte geometrische Platten und Stäbe lassen sich zu Häuschen, Fahrzeugen und Figuren verbinden. Fördert Experimentierfreude und räumliches Denken – ohne Bildschirm. BrickNova Eigenmarke.",
     category: "forschen",
     price: 34.99,
     originalPrice: 39.99,

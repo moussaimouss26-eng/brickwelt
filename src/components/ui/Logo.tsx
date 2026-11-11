@@ -10,7 +10,7 @@ export function Logo({ className = "", compact = false }: LogoProps) {
     <Link
       href="/"
       className={`group inline-flex items-center gap-2.5 ${className}`}
-      aria-label="BrickWelt Startseite"
+      aria-label="BrickNova Startseite"
     >
       <svg
         width={compact ? 36 : 44}
@@ -35,7 +35,7 @@ export function Logo({ className = "", compact = false }: LogoProps) {
         />
       </svg>
       <span className="font-display text-xl font-extrabold tracking-tight text-brick-black sm:text-2xl">
-        Brick<span className="text-brick-red">Welt</span>
+        Brick<span className="text-brick-red">Nova</span>
       </span>
     </Link>
   );

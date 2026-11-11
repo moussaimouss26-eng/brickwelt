@@ -3,13 +3,13 @@ export const SITE_URL = "https://bricknova.store" as const;
 
 export const siteBrand = {
   /** Shop / seller name shown to customers & GMC */
-  name: "BrickWelt",
+  name: "BrickNova",
   /** Domain brand */
   domainBrand: "BrickNova",
   /** Product brand in schema/feed — own brand only */
   productBrand: "BrickNova",
   tagline:
-    "BrickNova by BrickWelt – Kinderspielzeug unter eigener Marke. Versand in Deutschland.",
+    "BrickNova – Kinderspielzeug unter eigener Marke. Versand in Deutschland.",
 } as const;
 
 export function absoluteUrl(path = "/"): string {

@@ -21,7 +21,7 @@ const body = Nunito({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "BrickNova – Kinderspielzeug kaufen | BrickWelt",
+    default: "BrickNova – Kinderspielzeug kaufen",
     template: "%s | BrickNova",
   },
   description: siteBrand.tagline,
@@ -29,7 +29,6 @@ export const metadata: Metadata = {
     "Kinderspielzeug",
     "Holzspielzeug",
     "BrickNova",
-    "BrickWelt",
     "Plüschtier",
     "Kinderpuzzle",
     "STEM Spielzeug",

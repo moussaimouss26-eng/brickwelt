@@ -9,7 +9,7 @@ interface ProductArtProps {
 
 /** Product photo when available; otherwise decorative SVG brick-art placeholder. */
 export function ProductArt({ product, className = "", priority = false }: ProductArtProps) {
-  const title = `${product.name} – Produktbild BrickWelt`;
+  const title = `${product.name} – Produktbild BrickNova`;
 
   if (product.imageUrl) {
     return (
@@ -90,7 +90,7 @@ export function ProductArt({ product, className = "", priority = false }: Produc
         fontSize="12"
         fontFamily="system-ui,sans-serif"
       >
-        Demo-Illustration · BrickWelt
+        Demo-Illustration · BrickNova
       </text>
     </svg>
   );

@@ -5,7 +5,7 @@ import { siteContact } from "@/data/contact";
 
 export const metadata: Metadata = {
   title: "Datenschutz",
-  description: "Datenschutzerklärung von BrickWelt – DSGVO-orientierte Demo-Informationen.",
+  description: "Datenschutzerklärung von BrickNova – DSGVO-orientierte Demo-Informationen.",
 };
 
 export default function DatenschutzPage() {
@@ -14,7 +14,7 @@ export default function DatenschutzPage() {
       <h1 className="section-title">Datenschutzerklärung</h1>
       <div className="mt-8 space-y-6 text-sm leading-relaxed text-brick-black/80">
         <p>
-          BrickWelt nimmt den Schutz personenbezogener Daten ernst. Diese Demo-Seite
+          BrickNova nimmt den Schutz personenbezogener Daten ernst. Diese Demo-Seite
           erläutert, welche Daten in einer Produktivumgebung typischerweise verarbeitet
           würden und was in dieser Demo lokal geschieht.
         </p>

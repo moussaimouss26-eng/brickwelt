@@ -65,7 +65,7 @@ export default function GmcChecklistPage() {
             <li>Versand für DE konfigurieren (4,99 € / kostenlos ab 49 €) und Retouren (14 Tage).</li>
             <li>Steuern / MwSt. für DE hinterlegen.</li>
             <li>
-              Marke BrickNova / BrickWelt – nur Eigenmarke, keine Drittlizenzen.
+              Marke BrickNova – nur Eigenmarke, keine Drittlizenzen.
             </li>
             <li>
               GTINs fehlen oft → Feed nutzt MPN=SKU (`bn-…`); echte GTINs nachpflegen wenn

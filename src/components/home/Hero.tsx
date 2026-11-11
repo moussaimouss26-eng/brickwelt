@@ -35,7 +35,7 @@ export function Hero() {
             </span>
           </h1>
           <p className="mt-5 max-w-md text-base text-brick-black/70 sm:text-lg">
-            BrickNova by BrickWelt – eigene Marke für Holz, Plüsch, Puzzle und STEM.
+            BrickNova – eigene Marke für Holz, Plüsch, Puzzle und STEM.
             Versand in Deutschland, Preise in EUR.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
