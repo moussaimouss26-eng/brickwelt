@@ -65,10 +65,12 @@ export default function GmcChecklistPage() {
             <li>Versand für DE konfigurieren (4,99 € / kostenlos ab 49 €) und Retouren (14 Tage).</li>
             <li>Steuern / MwSt. für DE hinterlegen.</li>
             <li>
-              Marken-/Markenrechtsfragen prüfen: Produkte als unabhängiger Händler,{" "}
-              <strong>keine</strong> offizielle LEGO-Autorisierung behaupten.
+              Marke BrickNova / BrickWelt – nur Eigenmarke, keine Drittlizenzen.
             </li>
-            <li>GTINs fehlen oft → `identifier_exists=no` bzw. MPN aus Set-Nr.; echte GTINs nachpflegen wenn verfügbar.</li>
+            <li>
+              GTINs fehlen oft → Feed nutzt MPN=SKU (`bn-…`); echte GTINs nachpflegen wenn
+              verfügbar.
+            </li>
             <li>Zahlungsanbieter / Checkout für Merchant-Review testen (aktuell Demo-Checkout ohne echte Zahlung).</li>
             <li>
               Kontakt prüfen: {siteContact.addressLine}, {siteContact.phoneDisplay},{" "}

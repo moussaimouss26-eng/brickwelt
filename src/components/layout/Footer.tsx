@@ -16,8 +16,8 @@ export function Footer() {
           <div className="lg:col-span-4">
             <Logo />
             <p className="mt-4 max-w-sm text-sm text-brick-black/70">
-              BrickWelt – dein Demo-Shop für LEGO Sets kaufen und LEGO Angebote
-              Deutschland entdecken. Premium Auswahl, faire Preise, Versand in DE.
+              BrickNova by BrickWelt – Kinderspielzeug unter eigener Marke.
+              Holz, Plüsch, Puzzle und STEM. Faire Preise, Versand in DE.
             </p>
             <div className="mt-6">
               <p className="mb-2 text-sm font-bold">Newsletter</p>

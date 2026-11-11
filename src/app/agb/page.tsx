@@ -62,9 +62,8 @@ export default function AgbPage() {
         <section>
           <h2 className="font-display text-lg font-bold">§5 Markenhinweis</h2>
           <p className="mt-2">
-            BrickWelt / BrickNova ist ein unabhängiger Shop und nicht mit der LEGO Group
-            verbunden. Es wird keine offizielle Autorisierung oder Lizenz der LEGO Group
-            beansprucht.
+            BrickWelt / BrickNova verkauft ausschließlich Spielzeug unter eigener Marke.
+            Es werden keine Lizenzen oder Autorisierungen Dritter beansprucht.
           </p>
         </section>
         <DisclaimerBanner />

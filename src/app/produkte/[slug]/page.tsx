@@ -106,7 +106,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
               </span>
               <span className="text-brick-black/40">·</span>
               <span>
-                {product.pieces.toLocaleString("de-DE")} Steine · Alter {product.age}
+                {product.pieces.toLocaleString("de-DE")} Teile · Alter {product.age}
               </span>
             </div>
 

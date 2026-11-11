@@ -106,8 +106,8 @@ export function getSeedOrders(): Order[] {
         land: "Deutschland",
       },
       [
-        { productId: "bw-1027", quantity: 1 },
-        { productId: "bw-1025", quantity: 2 },
+        { productId: "bn-1003", quantity: 1 },
+        { productId: "bn-1001", quantity: 2 },
       ]
     ),
     buildOrder(
@@ -123,7 +123,7 @@ export function getSeedOrders(): Order[] {
         ort: "München",
         land: "Deutschland",
       },
-      [{ productId: "bw-1026", quantity: 1 }]
+      [{ productId: "bn-1002", quantity: 1 }]
     ),
     buildOrder(
       "BW-10039",
@@ -139,8 +139,8 @@ export function getSeedOrders(): Order[] {
         land: "Deutschland",
       },
       [
-        { productId: "bw-1028", quantity: 1 },
-        { productId: "bw-1036", quantity: 1 },
+        { productId: "bn-1004", quantity: 1 },
+        { productId: "bn-1002", quantity: 1 },
       ]
     ),
     buildOrder(
@@ -157,8 +157,8 @@ export function getSeedOrders(): Order[] {
         land: "Deutschland",
       },
       [
-        { productId: "bw-1029", quantity: 1 },
-        { productId: "bw-1037", quantity: 1 },
+        { productId: "bn-1005", quantity: 1 },
+        { productId: "bn-1003", quantity: 1 },
       ]
     ),
     buildOrder(
@@ -174,7 +174,7 @@ export function getSeedOrders(): Order[] {
         ort: "Frankfurt am Main",
         land: "Deutschland",
       },
-      [{ productId: "bw-1030", quantity: 1 }]
+      [{ productId: "bn-1001", quantity: 1 }]
     ),
     buildOrder(
       "BW-10036",
@@ -190,8 +190,8 @@ export function getSeedOrders(): Order[] {
         land: "Deutschland",
       },
       [
-        { productId: "bw-1038", quantity: 2 },
-        { productId: "bw-1032", quantity: 1 },
+        { productId: "bn-1004", quantity: 2 },
+        { productId: "bn-1003", quantity: 1 },
       ]
     ),
     buildOrder(
@@ -208,8 +208,8 @@ export function getSeedOrders(): Order[] {
         land: "Deutschland",
       },
       [
-        { productId: "bw-1034", quantity: 1 },
-        { productId: "bw-1039", quantity: 1 },
+        { productId: "bn-1005", quantity: 1 },
+        { productId: "bn-1005", quantity: 1 },
       ]
     ),
     buildOrder(
@@ -225,7 +225,7 @@ export function getSeedOrders(): Order[] {
         ort: "München",
         land: "Deutschland",
       },
-      [{ productId: "bw-1031", quantity: 1 }]
+      [{ productId: "bn-1002", quantity: 1 }]
     ),
     buildOrder(
       "BW-10033",
@@ -241,8 +241,8 @@ export function getSeedOrders(): Order[] {
         land: "Deutschland",
       },
       [
-        { productId: "bw-1035", quantity: 1 },
-        { productId: "bw-1025", quantity: 1 },
+        { productId: "bn-1001", quantity: 1 },
+        { productId: "bn-1001", quantity: 1 },
       ]
     ),
     buildOrder(
@@ -258,7 +258,7 @@ export function getSeedOrders(): Order[] {
         ort: "Hamburg",
         land: "Deutschland",
       },
-      [{ productId: "bw-1033", quantity: 1 }]
+      [{ productId: "bn-1004", quantity: 1 }]
     ),
   ].filter((o): o is Order => Boolean(o));
 

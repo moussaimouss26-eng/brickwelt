@@ -6,10 +6,10 @@ export const siteBrand = {
   name: "BrickWelt",
   /** Domain brand */
   domainBrand: "BrickNova",
-  /** Product brand in schema/feed — seller brand, not LEGO Group */
-  productBrand: "BrickWelt",
+  /** Product brand in schema/feed — own brand only */
+  productBrand: "BrickNova",
   tagline:
-    "Unabhängiger Online-Shop für Bau-Sets und Spielwaren in Deutschland. Nicht verbunden mit der LEGO Group.",
+    "BrickNova by BrickWelt – Kinderspielzeug unter eigener Marke. Versand in Deutschland.",
 } as const;
 
 export function absoluteUrl(path = "/"): string {

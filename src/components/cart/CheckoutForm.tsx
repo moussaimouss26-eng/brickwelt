@@ -137,7 +137,7 @@ export function CheckoutForm() {
         </fieldset>
         <p className="disclaimer">
           Demo-Checkout: Bestellungen werden lokal im Browser gespeichert und erscheinen im
-          Admin-Panel. Keine echte Zahlung. BrickWelt ist nicht mit der LEGO Group verbunden.
+          Admin-Panel. Keine echte Zahlung. Verkauf unter Eigenmarke BrickNova.
         </p>
       </div>
 

@@ -8,6 +8,7 @@ import {
   getDeals,
   getGiftIdeas,
   getNewArrivals,
+  products,
 } from "@/data/products";
 import { DisclaimerBanner } from "@/components/ui/DisclaimerBanner";
 
@@ -18,21 +19,21 @@ export default function HomePage() {
       <CategoryGrid />
       <ProductRail
         title="Bestseller"
-        subtitle="Die beliebtesten Sets bei BrickWelt."
-        products={getBestsellers(8)}
+        subtitle="Die beliebtesten BrickNova-Spielzeuge."
+        products={getBestsellers(5)}
         href="/produkte?sort=popularity"
       />
       <ProductRail
         title="Neuheiten"
-        subtitle="Frisch im Demo-Katalog."
-        products={getNewArrivals(8)}
+        subtitle="Frisch im BrickNova-Katalog."
+        products={getNewArrivals(5)}
         href="/neuheiten"
       />
       <section className="bg-[linear-gradient(180deg,#fff_0%,#FFF8E7_40%,#fff_100%)]">
         <ProductRail
           title="Angebote"
-          subtitle="LEGO Angebote Deutschland – Demo-Rabatte."
-          products={getDeals(8)}
+          subtitle="Aktuelle Preise und Sparaktionen."
+          products={getDeals(5)}
           href="/angebote"
           linkLabel="Alle Angebote"
         />
@@ -40,7 +41,7 @@ export default function HomePage() {
       <ProductRail
         title="Geschenkideen"
         subtitle="Für Geburtstag, Feiertage und spontane Freude."
-        products={getGiftIdeas(8)}
+        products={getGiftIdeas(5).length ? getGiftIdeas(5) : products}
         href="/geschenkideen"
       />
       <Testimonials />

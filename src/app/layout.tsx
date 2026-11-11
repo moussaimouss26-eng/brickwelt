@@ -21,21 +21,21 @@ const body = Nunito({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "BrickWelt – Bau-Sets & Spielwaren kaufen | Deutschland",
-    template: "%s | BrickWelt",
+    default: "BrickNova – Kinderspielzeug kaufen | BrickWelt",
+    template: "%s | BrickNova",
   },
-  description:
-    "BrickWelt (BrickNova): Bau-Sets und Spielwaren online kaufen. Versand in Deutschland – unabhängiger Shop, nicht verbunden mit der LEGO Group.",
+  description: siteBrand.tagline,
   keywords: [
-    "Bau-Sets kaufen",
-    "Spielwaren Deutschland",
-    "BrickWelt",
+    "Kinderspielzeug",
+    "Holzspielzeug",
     "BrickNova",
-    "Technic Sets",
-    "Architecture Sets",
+    "BrickWelt",
+    "Plüschtier",
+    "Kinderpuzzle",
+    "STEM Spielzeug",
   ],
   openGraph: {
-    title: "BrickWelt – Bau-Sets kaufen",
+    title: "BrickNova – Kinderspielzeug",
     description: siteBrand.tagline,
     locale: "de_DE",
     type: "website",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "BrickWelt – Bau-Sets kaufen",
+    title: "BrickNova – Kinderspielzeug",
     description: siteBrand.tagline,
   },
   robots: { index: true, follow: true },

@@ -3,7 +3,7 @@ import { CartView } from "@/components/cart/CartView";
 
 export const metadata: Metadata = {
   title: "Warenkorb",
-  description: "Dein BrickWelt Warenkorb – LEGO Sets in EUR.",
+  description: "Dein BrickNova Warenkorb – Preise in EUR.",
 };
 
 export default function WarenkorbPage() {

@@ -1,15 +1,9 @@
 import type { Product } from "@/lib/types";
 import { productImageUrl, productUrl, siteBrand } from "@/lib/site";
 
-/** LEGO set number from specs when present (used as MPN, not as GTIN). */
-export function getProductMpn(product: Product): string | undefined {
-  const fromSpecs = product.specs.find((s) =>
-    /set[- ]?nr\.?/i.test(s.label)
-  )?.value;
-  if (fromSpecs && /^\d{4,6}$/.test(fromSpecs.trim())) return fromSpecs.trim();
-
-  const slugMatch = product.slug.match(/(\d{4,6})$/);
-  return slugMatch?.[1];
+/** Own-brand article / MPN = SKU (no third-party set numbers). */
+export function getProductMpn(product: Product): string {
+  return product.id;
 }
 
 export function productAvailability(product: Product): {
@@ -36,7 +30,6 @@ export function toGoogleMerchantItem(product: Product): Record<string, string> {
   const mpn = getProductMpn(product);
   const image = productImageUrl(product.imageUrl) ?? "";
   const availability = productAvailability(product);
-
   const regular = product.originalPrice ?? product.price;
   const onSale = Boolean(product.originalPrice && product.originalPrice > product.price);
 
@@ -51,9 +44,9 @@ export function toGoogleMerchantItem(product: Product): Record<string, string> {
     ...(onSale ? { sale_price: `${product.price.toFixed(2)} EUR` } : {}),
     brand: siteBrand.productBrand,
     condition: "new",
-    ...(mpn ? { mpn } : {}),
-    identifier_exists: mpn ? "yes" : "no",
-    google_product_category: "Toys & Games > Toys > Building Toys",
+    mpn,
+    identifier_exists: "yes",
+    google_product_category: "Toys & Games > Toys",
     product_type: product.category,
     shipping: "DE:::4.99 EUR",
   };

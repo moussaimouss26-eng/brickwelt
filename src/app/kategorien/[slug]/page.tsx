@@ -23,8 +23,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const cat = getCategory(slug);
   if (!cat) return { title: "Kategorie" };
   return {
-    title: `${cat.name} LEGO Sets kaufen`,
-    description: `${cat.description} LEGO Sets kaufen bei BrickWelt – Angebote Deutschland.`,
+    title: `${cat.name} – BrickNova`,
+    description: `${cat.description} BrickNova Kinderspielzeug bei BrickWelt.`,
   };
 }
 

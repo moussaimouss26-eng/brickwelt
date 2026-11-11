@@ -7,9 +7,9 @@ import type { SortOption } from "@/lib/types";
 import { DisclaimerBanner } from "@/components/ui/DisclaimerBanner";
 
 export const metadata: Metadata = {
-  title: "LEGO Sets kaufen – Alle Produkte",
+  title: "Alle Produkte – BrickNova",
   description:
-    "Durchsuche den BrickWelt Katalog: LEGO Sets kaufen mit Filter nach Kategorie, Preis und Beliebtheit. LEGO Angebote Deutschland.",
+    "Durchsuche den BrickNova Katalog: Kinderspielzeug nach Kategorie, Preis und Beliebtheit.",
 };
 
 interface PageProps {
@@ -34,9 +34,9 @@ export default async function ProduktePage({ searchParams }: PageProps) {
 
   return (
     <div className="container-bw py-10">
-      <h1 className="section-title">LEGO Sets kaufen</h1>
+      <h1 className="section-title">Alle Produkte</h1>
       <p className="section-sub">
-        {products.length} Produkte im Demo-Katalog · Preise in EUR
+        {products.length} BrickNova-Artikel · Preise in EUR
       </p>
       <DisclaimerBanner className="mt-4" />
 

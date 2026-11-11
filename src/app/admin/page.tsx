@@ -48,7 +48,7 @@ export default function AdminDashboardPage() {
         {[
           { label: "Umsatz", value: formatEUR(stats.revenue) },
           { label: "Bestellungen", value: String(orders.length) },
-          { label: "Verkaufte Steine-Sets", value: String(stats.units) },
+          { label: "Verkaufte Artikel", value: String(stats.units) },
           { label: "Kunden", value: String(stats.customers) },
         ].map((card) => (
           <div

@@ -85,12 +85,11 @@ export function ProductJsonLd({ product }: { product: Product }) {
         merchantReturnLink: absoluteUrl("/widerruf"),
       },
     },
-    additionalProperty: [
+      additionalProperty: [
       {
         "@type": "PropertyValue",
-        name: "Verkäuferhinweis",
-        value:
-          "Unabhängiger Händler. Nicht autorisiert oder lizenziert von der LEGO Group.",
+        name: "Marke",
+        value: siteBrand.productBrand,
       },
       {
         "@type": "PropertyValue",
