@@ -34,19 +34,37 @@ export default function AgbPage() {
         <section>
           <h2 className="font-display text-lg font-bold">§3 Versand</h2>
           <p className="mt-2">
-            Angezeigte Versandkosten (kostenlos ab 49 €) sind Beispielwerte für den
-            deutschen Markt. Versandadresse / Lagerort für diese Demo:{" "}
-            {siteContact.addressLine}. Rückfragen zum Versand unter{" "}
+            Versand innerhalb Deutschlands. Standardversand 4,99&nbsp;€; ab einem
+            Bestellwert von 49&nbsp;€ versandkostenfrei. Versandort:{" "}
+            {siteContact.addressLine}. Lieferzeit typischerweise 2–5 Werktage nach
+            Bearbeitung. Rückfragen:{" "}
             <a href={siteContact.phoneHref} className="font-medium text-brick-red hover:underline">
               {siteContact.phoneDisplay}
+            </a>
+            {" · "}
+            <a href={`mailto:${siteContact.email}`} className="font-medium text-brick-red hover:underline">
+              {siteContact.email}
             </a>
             .
           </p>
         </section>
         <section>
-          <h2 className="font-display text-lg font-bold">§4 Markenhinweis</h2>
+          <h2 className="font-display text-lg font-bold">§4 Widerruf &amp; Retouren</h2>
           <p className="mt-2">
-            BrickWelt ist ein unabhängiger Shop und nicht mit der LEGO Group verbunden.
+            Verbrauchern steht ein Widerrufsrecht von 14 Tagen zu. Details und Adresse:
+            siehe{" "}
+            <a href="/widerruf" className="font-medium text-brick-red hover:underline">
+              Widerrufsbelehrung
+            </a>
+            .
+          </p>
+        </section>
+        <section>
+          <h2 className="font-display text-lg font-bold">§5 Markenhinweis</h2>
+          <p className="mt-2">
+            BrickWelt / BrickNova ist ein unabhängiger Shop und nicht mit der LEGO Group
+            verbunden. Es wird keine offizielle Autorisierung oder Lizenz der LEGO Group
+            beansprucht.
           </p>
         </section>
         <DisclaimerBanner />

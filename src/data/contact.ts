@@ -10,7 +10,7 @@ export const siteContact = {
   addressLine: "Sonnenallee 25, 12047 Berlin-Neukölln",
   phoneDisplay: "+49 1575 8375588",
   phoneHref: "tel:+4915758375588",
-  email: "demo@brickwelt.example",
+  email: "kontakt@bricknova.store",
 } as const;
 
 export function addressMultiline(): string[] {
