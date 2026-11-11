@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Cookie } from "lucide-react";
 
-const KEY = "brickwelt-cookie-consent";
+const KEY = "bricknova-cookie-consent";
 
 export function CookieConsent() {
   const [visible, setVisible] = useState(false);

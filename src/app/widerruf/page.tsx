@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { DisclaimerBanner } from "@/components/ui/DisclaimerBanner";
+import { ContactDetails } from "@/components/ui/ContactDetails";
+import { siteContact } from "@/data/contact";
 
 export const metadata: Metadata = {
   title: "Widerrufsbelehrung",
-  description: "Widerrufsbelehrung (Demo) für BrickWelt.",
+  description: "Widerrufsbelehrung (Demo) für BrickNova.",
 };
 
 export default function WiderrufPage() {
@@ -12,7 +14,7 @@ export default function WiderrufPage() {
       <h1 className="section-title">Widerrufsbelehrung</h1>
       <div className="mt-8 space-y-6 text-sm leading-relaxed text-brick-black/80">
         <p>
-          Muster-Widerrufsbelehrung für den BrickWelt Demo-Shop. Da keine echten
+          Muster-Widerrufsbelehrung für den BrickNova Demo-Shop. Da keine echten
           Verträge geschlossen werden, dient dieser Text nur der Vollständigkeit einer
           deutschen Shop-Struktur.
         </p>
@@ -24,10 +26,19 @@ export default function WiderrufPage() {
           </p>
         </section>
         <section>
+          <h2 className="font-display text-lg font-bold">Widerrufsadresse</h2>
+          <p className="mt-2">
+            Im Produktivbetrieb wäre der Widerruf zu richten an {siteContact.legalName}:
+          </p>
+          <div className="mt-4 rounded-2xl border border-black/5 bg-brick-soft/60 p-5">
+            <ContactDetails />
+          </div>
+        </section>
+        <section>
           <h2 className="font-display text-lg font-bold">Folgen des Widerrufs (Muster)</h2>
           <p className="mt-2">
             Im Produktivbetrieb wären Waren zurückzusenden und Zahlungen zu erstatten.
-            BrickWelt Demo verarbeitet keine Zahlungen.
+            BrickNova Demo verarbeitet keine Zahlungen.
           </p>
         </section>
         <DisclaimerBanner />

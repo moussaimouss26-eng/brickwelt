@@ -7,7 +7,7 @@ import type { SortOption } from "@/lib/types";
 
 export const metadata: Metadata = {
   title: "Suche",
-  description: "LEGO Sets suchen bei BrickWelt.",
+  description: "BrickNova Spielzeug suchen bei BrickNova.",
 };
 
 interface PageProps {

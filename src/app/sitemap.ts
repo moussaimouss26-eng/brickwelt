@@ -1,38 +1,34 @@
 import type { MetadataRoute } from "next";
 import { products } from "@/data/products";
-import { categories } from "@/data/categories";
+import { getPopulatedCategories } from "@/lib/catalog";
+import { SITE_URL } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://brickwelt.example";
   const staticRoutes = [
     "",
     "/produkte",
     "/angebote",
     "/neuheiten",
     "/geschenkideen",
-    "/warenkorb",
-    "/wunschliste",
-    "/kasse",
-    "/konto",
     "/impressum",
     "/datenschutz",
     "/agb",
     "/widerruf",
     "/suche",
   ].map((path) => ({
-    url: `${base}${path}`,
+    url: `${SITE_URL}${path}`,
     changeFrequency: "weekly" as const,
     priority: path === "" ? 1 : 0.7,
   }));
 
   const productRoutes = products.map((p) => ({
-    url: `${base}/produkte/${p.slug}`,
-    changeFrequency: "weekly" as const,
-    priority: 0.8,
+    url: `${SITE_URL}/produkte/${p.slug}`,
+    changeFrequency: "daily" as const,
+    priority: 0.9,
   }));
 
-  const categoryRoutes = categories.map((c) => ({
-    url: `${base}/kategorien/${c.slug}`,
+  const categoryRoutes = getPopulatedCategories().map(({ category: c }) => ({
+    url: `${SITE_URL}/kategorien/${c.slug}`,
     changeFrequency: "weekly" as const,
     priority: 0.75,
   }));

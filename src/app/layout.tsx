@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { Nunito, Outfit } from "next/font/google";
-import { AnnouncementBar } from "@/components/layout/AnnouncementBar";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
-import { CookieConsent } from "@/components/layout/CookieConsent";
 import { Providers } from "@/components/layout/Providers";
+import { StoreShell } from "@/components/layout/StoreShell";
+import { SiteJsonLd } from "@/components/seo/SiteJsonLd";
+import { SITE_URL, siteBrand } from "@/lib/site";
 import "./globals.css";
 
 const display = Outfit({
@@ -20,32 +19,38 @@ const body = Nunito({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://brickwelt.example"),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "BrickWelt – LEGO Sets kaufen | LEGO Angebote Deutschland",
-    template: "%s | BrickWelt",
+    default: "BrickNova – Kinderspielzeug kaufen",
+    template: "%s | BrickNova",
   },
-  description:
-    "BrickWelt: LEGO Sets kaufen und LEGO Angebote Deutschland entdecken. Unabhängiger Demo-Shop mit Versand in DE – nicht verbunden mit der LEGO Group.",
+  description: siteBrand.tagline,
   keywords: [
-    "LEGO Sets kaufen",
-    "LEGO Angebote Deutschland",
-    "LEGO Shop Deutschland",
-    "BrickWelt",
-    "Technic",
-    "Star Wars LEGO",
-    "LEGO City",
+    "Kinderspielzeug",
+    "Holzspielzeug",
+    "BrickNova",
+    "Plüschtier",
+    "Kinderpuzzle",
+    "STEM Spielzeug",
   ],
   openGraph: {
-    title: "BrickWelt – LEGO Sets kaufen",
-    description:
-      "Premium Demo-Shop für LEGO Sets in Deutschland. Angebote, Neuheiten und Geschenkideen.",
+    title: "BrickNova – Kinderspielzeug",
+    description: siteBrand.tagline,
     locale: "de_DE",
     type: "website",
-    siteName: "BrickWelt",
+    siteName: siteBrand.name,
+    url: SITE_URL,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "BrickNova – Kinderspielzeug",
+    description: siteBrand.tagline,
   },
   robots: { index: true, follow: true },
   alternates: { canonical: "/" },
+  verification: {
+    google: "WCjP1Fk9n9JRf9L-WKdT1KMcL7pJ38djimzpxaR5gG4",
+  },
 };
 
 export default function RootLayout({
@@ -56,12 +61,9 @@ export default function RootLayout({
   return (
     <html lang="de">
       <body className={`${display.variable} ${body.variable} min-h-screen antialiased`}>
+        <SiteJsonLd />
         <Providers>
-          <AnnouncementBar />
-          <Header />
-          <main className="min-h-[60vh]">{children}</main>
-          <Footer />
-          <CookieConsent />
+          <StoreShell>{children}</StoreShell>
         </Providers>
       </body>
     </html>

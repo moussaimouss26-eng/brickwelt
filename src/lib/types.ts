@@ -1,15 +1,9 @@
 export type CategorySlug =
-  | "technic"
-  | "star-wars"
-  | "city"
-  | "architecture"
-  | "icons"
-  | "creator"
-  | "harry-potter"
-  | "friends"
-  | "ninjago"
-  | "duplo"
-  | "speed-champions";
+  | "holzspielzeug"
+  | "kuscheltiere"
+  | "bauen"
+  | "puzzle"
+  | "forschen";
 
 export interface Category {
   slug: CategorySlug;
@@ -38,6 +32,8 @@ export interface Product {
   isDeal?: boolean;
   isGiftIdea?: boolean;
   colors: [string, string, string];
+  /** Optional real product photo under /public (preferred over SVG placeholder). */
+  imageUrl?: string;
   specs: { label: string; value: string }[];
   tags: string[];
 }

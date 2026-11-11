@@ -11,8 +11,7 @@ export function NewsletterSection() {
             Angebote zuerst erfahren
           </h2>
           <p className="mt-3 text-white/70">
-            Newsletter für LEGO Angebote Deutschland – Demo-Anmeldung, keine echte
-            Speicherung.
+            Newsletter für BrickNova Angebote – Anmeldung lokal, keine Server-Speicherung.
           </p>
           <div className="mt-6 [&_input]:text-brick-black">
             <NewsletterForm />

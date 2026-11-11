@@ -65,7 +65,7 @@ export function Header() {
               <input
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                placeholder="LEGO Sets suchen…"
+                placeholder="Spielzeug suchen…"
                 className="input-field !rounded-full !py-2.5 pl-10 pr-4"
                 aria-label="Produkte suchen"
               />
@@ -146,7 +146,7 @@ export function Header() {
               <input
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                placeholder="LEGO Sets suchen…"
+                placeholder="Spielzeug suchen…"
                 className="input-field pl-10"
               />
             </form>

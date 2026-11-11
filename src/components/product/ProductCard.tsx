@@ -64,7 +64,7 @@ export function ProductCard({ product }: { product: Product }) {
         <div className="mt-2 flex items-center gap-1 text-xs text-brick-black/55">
           <Star className="h-3.5 w-3.5 fill-brick-yellow text-brick-yellow" />
           <span>
-            {product.rating.toFixed(1)} · {product.pieces.toLocaleString("de-DE")} Steine ·{" "}
+            {product.rating.toFixed(1)} · {product.pieces.toLocaleString("de-DE")} Teile ·{" "}
             {product.age}
           </span>
         </div>

@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { DisclaimerBanner } from "@/components/ui/DisclaimerBanner";
+import { ContactDetails } from "@/components/ui/ContactDetails";
+import { siteContact } from "@/data/contact";
 
 export const metadata: Metadata = {
   title: "Datenschutz",
-  description: "Datenschutzerklärung von BrickWelt – DSGVO-orientierte Demo-Informationen.",
+  description: "Datenschutzerklärung von BrickNova – DSGVO-orientierte Demo-Informationen.",
 };
 
 export default function DatenschutzPage() {
@@ -12,17 +14,21 @@ export default function DatenschutzPage() {
       <h1 className="section-title">Datenschutzerklärung</h1>
       <div className="mt-8 space-y-6 text-sm leading-relaxed text-brick-black/80">
         <p>
-          BrickWelt nimmt den Schutz personenbezogener Daten ernst. Diese Demo-Seite
+          BrickNova nimmt den Schutz personenbezogener Daten ernst. Diese Demo-Seite
           erläutert, welche Daten in einer Produktivumgebung typischerweise verarbeitet
           würden und was in dieser Demo lokal geschieht.
         </p>
         <section>
           <h2 className="font-display text-lg font-bold text-brick-black">
-            1. Verantwortliche Stelle (Demo)
+            1. Verantwortliche Stelle
           </h2>
           <p className="mt-2">
-            BrickWelt Demo GmbH, Musterstraße 12, 10115 Berlin – demo@brickwelt.example
+            Verantwortlicher im Sinne der DSGVO ist {siteContact.legalName},{" "}
+            {siteContact.addressLine}, {siteContact.country}.
           </p>
+          <div className="mt-4 rounded-2xl border border-black/5 bg-brick-soft/60 p-5">
+            <ContactDetails />
+          </div>
         </section>
         <section>
           <h2 className="font-display text-lg font-bold text-brick-black">

@@ -7,7 +7,7 @@ export function AnnouncementBar() {
       <div className="container-bw relative flex items-center justify-center gap-2 py-2 text-center text-xs font-semibold sm:text-sm">
         <Truck className="hidden h-4 w-4 text-brick-yellow sm:block" aria-hidden />
         <span>
-          Kostenloser Versand ab 49&nbsp;€ · LEGO Sets kaufen in Deutschland · Demo-Shop
+          Kostenloser Versand ab 49&nbsp;€ · BrickNova Kinderspielzeug · Versand DE
         </span>
       </div>
     </div>

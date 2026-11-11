@@ -19,7 +19,7 @@ interface WishlistContextValue {
 }
 
 const WishlistContext = createContext<WishlistContextValue | null>(null);
-const STORAGE_KEY = "brickwelt-wishlist";
+const STORAGE_KEY = "bricknova-wishlist";
 
 export function WishlistProvider({ children }: { children: ReactNode }) {
   const [ids, setIds] = useState<string[]>([]);
